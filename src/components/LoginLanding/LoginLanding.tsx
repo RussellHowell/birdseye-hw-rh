@@ -5,7 +5,9 @@ interface ILoginLandingProps {
 
 const LoginLanding: React.FunctionComponent<ILoginLandingProps> = (props) => {
   return(
-      <div/>
+      <div>
+          Login
+      </div>
   );
 };
 

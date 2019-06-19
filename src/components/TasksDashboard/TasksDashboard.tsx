@@ -5,7 +5,9 @@ interface ITasksDashboardProps {
 
 const TasksDashboard: React.FunctionComponent<ITasksDashboardProps> = (props) => {
   return( 
-      <div/>
+      <div>
+          Tasks Dash
+      </div>
   ) ;
 };
 
