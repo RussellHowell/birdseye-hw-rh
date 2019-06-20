@@ -14,7 +14,8 @@ const App: React.FC = () => {
     <div className="App">
       <ThemeProvider theme={theme} >
         <Router>
-          <Route path='/' exact component={ LoginLanding } />
+          {/* <Route path='/' exact component={ LoginLanding } /> */}
+          <Route path='/'  exact render={ ( props ) => <TasksDashboard  taskList={ loadedTasks }/> } />
           <Route 
           path='/dashboard/' 
           render={ ( props ) => <TasksDashboard  taskList={ loadedTasks }/> }/>
