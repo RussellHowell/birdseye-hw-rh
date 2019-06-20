@@ -1,6 +1,8 @@
 import { createMuiTheme } from '@material-ui/core/styles';
+import { fontWeight } from '@material-ui/system';
+import { Theme } from '@material-ui/core';
 
-export const theme = createMuiTheme({
+export const theme: Theme = createMuiTheme({
     palette: {
       primary: {
         main: '#2918f6',
@@ -12,6 +14,7 @@ export const theme = createMuiTheme({
       },
   
     },
+
     typography: {
       fontFamily: [
         'Roboto',
@@ -27,7 +30,7 @@ export const theme = createMuiTheme({
       },
       h1: {
         fontSize: 40,
-        fontFamily: 'roboto',
+        fontFamily: 'roboto'
       },
       h2:{ 
         fontSize: 22,

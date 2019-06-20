@@ -14,6 +14,7 @@ const TasksDashboard: React.FunctionComponent<ITasksDashboardProps> = (props) =>
       <Row style={{ height: '100vh'}}> 
         <Col md={3}>
           <TaskList 
+            tasks={ props.taskList }
             heading="Tasks"/>
         </Col>
         <Col md={9}>
