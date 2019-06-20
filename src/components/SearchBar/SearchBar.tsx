@@ -53,7 +53,6 @@ const SearchBar: React.FunctionComponent<ISearchBarProps> = (props) => {
     whiteText: {
       color: theme.palette.common.white
     }
-
   }));
 
   const classes = useStyles();

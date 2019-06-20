@@ -12,15 +12,16 @@ interface ITasksDashboardProps {
 const TasksDashboard: React.FunctionComponent<ITasksDashboardProps> = (props) => {
   return( 
       <Row style={{ height: '100vh'}}> 
-        <Col md={4}>
+        <Col md={4} style={ { padding: 0 }}>
           <TaskList 
             tasks={ props.taskList }
             heading="Tasks"
-            showFinishedTasks={true}/>
+            tabs={ ['All', 'Projects']}
+            showFinishedTasks={false}/>
         </Col>
-        <Col md={8}>
+        <Col md={8} style={{ padding: 0 }}>
           <SearchBar/>
-          <TasksCarousel />
+          <TasksCarousel tasks={ props.taskList } />
         </Col>
       </Row>
   ) ;

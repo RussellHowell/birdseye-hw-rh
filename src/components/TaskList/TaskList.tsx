@@ -5,6 +5,7 @@ import { Theme, Box, Typography, Button, List } from '@material-ui/core';
 import { theme } from '../../Theme';
 import { fontWeight } from '@material-ui/system';
 import TaskListEntry from '../TaskListEntry/TaskListEntry';
+import * as _ from 'lodash';
 
 interface ITaskListProps {
     heading: string, 
@@ -42,7 +43,9 @@ const useStyles = makeStyles( ( theme: Theme ) => createStyles({
         alignItems: 'center',
         backgroundColor: 'rgba(0,0,0,0,)',
         color: theme.palette.grey[600],
-        
+    },
+    subheading: {
+        color: theme.palette.grey[600]
     }
 }));
 
@@ -68,10 +71,16 @@ const TaskList: React.FunctionComponent<ITaskListProps> = (props) => {
                 <Typography variant={ 'h1' } className={ classes.heading }> 
                     { props.heading }
                 </Typography>
+                <Typography variant={ 'h2' } className={ classes.subheading }>
+                    { props.subheading }
+                </Typography>   
             </Box>
-            <Box className={ classes.tabsBox }>
-                tabsBox
-            </Box>
+            {   
+                _.isUndefined( props.tabs ) ? <Box className={ classes.tabsBox} /> :
+                    <Box className={ classes.tabsBox }>
+                        tabsBox
+                    </Box>
+            }
             <CreateTaskButton fullWidth={true}>
                 + Create Task
             </CreateTaskButton>

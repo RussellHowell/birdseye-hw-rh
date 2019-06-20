@@ -7,7 +7,7 @@ const loadMockTasks = (): Array<ITask> => {
     return json.map( (task: ITask) => {
         return {
             ...task,
-            scheduledTime: moment().add(Math.floor(Math.random()), "days") 
+            scheduledTime: moment().add(Math.floor(Math.random()*2), "days") 
         }
     } ) 
 }
