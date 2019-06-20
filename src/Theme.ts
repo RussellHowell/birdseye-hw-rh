@@ -48,6 +48,11 @@ export const theme: Theme = createMuiTheme({
       h6: {
         fontFamily: 'roboto',
         fontSize: 10
+      },
+      subtitle1: {
+        fontFamily: 'Lato',
+        fontSize: 24,
+        fontStyle: 'italic'
       }
       
     }
