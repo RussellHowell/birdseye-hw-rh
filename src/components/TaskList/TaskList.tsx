@@ -81,7 +81,7 @@ const TaskList: React.FunctionComponent<ITaskListProps> = (props) => {
             }
             </List>
             {
-                props.showFinishedTasks ? (
+                props.showFinishedTasks && props.tasks.filter( task => task.isComplete ).length > 0 ? (
                     <Box width='100%'>
                         <Box className={ classes.completedText } width='100%'>
                             <Typography  align='center' display='block' variant={ 'subtitle1' }>
@@ -97,7 +97,6 @@ const TaskList: React.FunctionComponent<ITaskListProps> = (props) => {
 
                 ) : undefined
             }
-
         </Box>
   ) ;
 };
